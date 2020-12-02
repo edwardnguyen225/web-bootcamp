@@ -5,33 +5,116 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Document</title>
-      <style>
-         table,td {
-            border: solid 1px black;
-         }
-
-         thead {
-            background-color: black;
-            color: white;
-         }
-      </style>
+      <link rel="stylesheet" href="styles.css">
    </head>
 
    <body>
-      <table>
-         <thead>
-            <tr>
-               <th colspan="2">The table header</th>
-            </tr>
-         </thead>
-         <tbody>
-            <tr>
-               <td>The table body</td>
-               <td>with two columns</td>
-            </tr>
-         </tbody>
-      </table>
+      <div class="demo1">
+         <table>
+            <thead>
+               <tr>
+                  <th colspan="2">The table header</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>The table body</td>
+                  <td>with two columns</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
       <hr>
+      <div class="birdy">
+         <h2>Heaviest living bird species</h2>
+         <table>
+            <thead>
+               <tr>
+                  <th rowspan="2">Rank</th>
+                  <th rowspan="2">Animal</th>
+                  <th colspan="2">Average mass</th>
+                  <th colspan="2">Maximum mass</th>
+                  <th colspan="2">Average total length</th>
+                  <th rowspan="2">Flighted</th>
+               </tr>
+               <tr>
+                  <th>kg</th>
+                  <th>lb</th>
+                  <th>kg</th>
+                  <th>lb</th>
+                  <th>cm</th>
+                  <th>ft</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>1</td>
+                  <td>Ostrich</td>
+                  <td>104</td>
+                  <td>230</td>
+                  <td>156.8</td>
+                  <td>246</td>
+                  <td>210</td>
+                  <td>6.9</td>
+                  <td>No</td>
+               </tr>
+               <tr>
+                  <td>2</td>
+                  <td>Somali Ostrich</td>
+                  <td>90</td>
+                  <td>200</td>
+                  <td>130</td>
+                  <td>287</td>
+                  <td>200</td>
+                  <td>6.6</td>
+                  <td>No</td>
+               </tr>
+               <tr>
+                  <td>3</td>
+                  <td>Southern cassowary</td>
+                  <td>45</td>
+                  <td>99</td>
+                  <td>85</td>
+                  <td>190</td>
+                  <td>155</td>
+                  <td>5.1</td>
+                  <td>No</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+
+      <div>
+         <!-- Subscription | Price | Support 
+         Free | Free | N/A 
+         Personal | $9.99 | Weekdays 
+         Business | $49.99 | 24/7  -->
+         <h2>Coding exercise 5</h2>
+         <Table>
+            <thead>
+               <th>Subscription</th>
+               <th>Price</th>
+               <th>Support</th>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>Free</td>
+                  <td>Free</td>
+                  <td>N/A</td>
+               </tr>
+               <tr>
+                  <td>Personal</td>
+                  <td>&#36;9.99</td>
+                  <td>Weekdays</td>
+               </tr>
+               <tr>
+                  <td>Business</td>
+                  <td>&#36;49.99</td>
+                  <td>24/7</td>
+               </tr>
+            </tbody>
+         </Table>
+      </div>
    </body>
 
 </html>
