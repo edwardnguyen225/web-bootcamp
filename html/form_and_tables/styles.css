@@ -1,0 +1,8 @@
+.demo1 table,.demo1 td {
+   border: solid 1px black;
+}
+
+.demo1 thead {
+   background-color: black;
+   color: white;
+}
