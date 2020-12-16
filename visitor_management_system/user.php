@@ -12,7 +12,7 @@ if(!$visitor->is_login())
 }
 
 if(!$visitor->is_master_user())
-{1rem 2rem
+{
 	header("location:".$visitor->base_url."dashboard.php");
 }
 
