@@ -3,9 +3,21 @@ body {
    background-color: #D6F7EE;
 }
 
+header {
+   margin-top: 100px;
+   margin-bottom: 50px;
+}
+
+header h1 {
+   font-size: 3rem;
+   font-weight: 300;
+   text-align: center;
+}
+
 #mainNavbar {
-   background: rgb(0,201,255);
-   background: linear-gradient(90deg, rgba(0,201,255,1) 0%, rgba(146,254,157,1) 100%);   font-size: 1.5rem;
+   background: rgb(0, 201, 255);
+   background: linear-gradient(90deg, rgba(0, 201, 255, 1) 0%, rgba(146, 254, 157, 1) 100%);
+   font-size: 1.5rem;
    font-weight: 200;
 }
 
@@ -72,8 +84,62 @@ body {
       font-weight: 100;
       font-size: 2.5rem;
    }
-   
+
    h2 {
       font-size: 2rem;
    }
+}
+
+/* bootsnip CSS */
+
+#demo {
+   height: 100%;
+   position: relative;
+   overflow: hidden;
+}
+
+
+.green {
+   background-color: #6fb936;
+}
+
+.thumb {
+   margin-bottom: 30px;
+}
+
+.page-top {
+   margin-top: 85px;
+}
+
+
+img.zoom {
+   width: 100%;
+   height: 100%;
+   border-radius: 5px;
+   object-fit: cover;
+   -webkit-transition: all .3s ease-in-out;
+   -moz-transition: all .3s ease-in-out;
+   -o-transition: all .3s ease-in-out;
+   -ms-transition: all .3s ease-in-out;
+}
+
+
+.transition {
+   -webkit-transform: scale(1.2);
+   -moz-transform: scale(1.2);
+   -o-transform: scale(1.2);
+   transform: scale(1.2);
+}
+
+.modal-header {
+
+   border-bottom: none;
+}
+
+.modal-title {
+   color: #000;
+}
+
+.modal-footer {
+   display: none;
 }
