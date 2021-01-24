@@ -18,7 +18,7 @@ function insertPokemonImg(num) {
 function updatePokemonImg() {
   const num = document.getElementById("numOfPokemon").value;
   const result = document.getElementById("result");
-  if (num <= 0) {
+  if (num <= 0 || num > 950) {
     const msg = "Invalid number!";
     result.innerText = msg;
   } else {
@@ -28,3 +28,15 @@ function updatePokemonImg() {
     insertPokemonImg(num);
   }
 }
+
+const getNumForm = document.getElementById("getPokeNum");
+getNumForm.addEventListener("submit", function(e) {
+  e.preventDefault();
+  updatePokemonImg();
+})
+getNumForm.addEventListener("reset", function(e) {
+  e.preventDefault();
+  const result = document.getElementById("result");
+  result.innerText = "deleted all pokemon";
+  deletePokemonImg();
+})

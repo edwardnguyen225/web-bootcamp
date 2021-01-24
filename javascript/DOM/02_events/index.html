@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="./app.css">
+      <title>Document</title>
+   </head>
+
+   <body>
+      <h1>Onclick properties</h1>
+
+      <button onclick="alert('You clicked me!'); alert('Stop clicking!')">Click me</button>
+      <hr>
+      <button id="v2">Click me v2</button>
+      <button id="v3">Click me v3</button>
+      <button id="twist_and_shout">Twist and Shout</button>
+      <hr>
+      <div class="change_background">
+         <h3>
+            The current background is
+            <span id="background_color"> rgb(255, 255, 255)</span>
+         </h3>
+         <button id="changeBGColor">Change background color</button>
+         <button id="resetBGColor">Reset background color</button>
+      </div>
+      <hr>
+      <div class="using_this">
+      </div>
+
+      <div>
+         <form action="" id="tweetForm">
+            <hr>
+            <h1>Form Event</h1>
+            <input type="text" name="username" id="username" placeholder="Username">
+            <input type="text" name="tweet" id="tweet" placeholder="Tweet">
+            <button type="submit">Post tweet</button>
+         </form>
+         <div id="tweet_container">
+            <h2>Tweets:</h2>
+         </div>
+         <hr>
+      </div>
+
+      <div>
+         <h1>Input & Change Events</h1>
+         <h2>Change below: <span id="textResult"></span></h2>
+         <input type="text" name="someText" id="someText" placeholder="Type in some text">
+      </div>
+
+      <script src="./app.js"></script>
+   </body>
+
+</html>

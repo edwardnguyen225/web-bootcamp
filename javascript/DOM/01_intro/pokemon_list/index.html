@@ -4,22 +4,22 @@
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <script src="./app.js"></script>
       <title>Pokemon list</title>
    </head>
 
    <body>
       <h1>This is pokemon list</h1>
-      <section>
+      <form action="" id="getPokeNum">
          <label for="numOfPokemon">Number of pokemon:</label>
          <input type="number" id="numOfPokemon" name="numOfPokemon">
-         <button id="update" onclick="updatePokemonImg()">Get my Pokemon</button>
-         <button id="delete" onclick="deletePokemonImg()">Delete img</button>
+         <button type="submit" id="update">Get my Pokemon</button>
+         <button type="reset" id="delete">Delete img</button>
          <div id="result"></div>
-      </section>
+      </form>
 
       <section id="container">
       </section>
+      <script src="./app.js"></script>
    </body>
 
 </html>
