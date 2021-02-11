@@ -5,27 +5,57 @@
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="./styles.css">
+      <!-- <link rel="stylesheet" href="./styles.css"> -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
       <title>Score keeper</title>
    </head>
 
    <body>
-      <h1><span id="player1_score_display">0</span> vs <span id="player2_score_display">0</span></h1>
+      <div class="container">
+         <div class="columns">
+            <div class="column is-half is-offset-one-quarter">
+               <div class="card">
+                  <div class="card-image">
+                     <figure class="image">
+                        <img src="./assets/img/ping_pong.jpg" alt="ping pong">
+                     </figure>
+                  </div>
+                  <header class="card-header">
 
-      <select name="winning_score_select" id="winning_score_select">
-         <option value="3">3</option>
-         <option value="4">4</option>
-         <option value="5">5</option>
-         <option value="6">6</option>
-         <option value="7">7</option>
-         <option value="8">8</option>
-         <option value="9">9</option>
-         <option value="10">10</option>
-      </select>
+                     <p class="card-header-title">Ping Pong Score Keeper</p>
+                  </header>
+                  <div class="card-content">
+                     <h1 class="title is-1"><span id="player1_score_display">0</span> vs <span
+                           id="player2_score_display">0</span></h1>
 
-      <button id="player1_score_inc_btn">+1 to Player One</button>
-      <button id="player2_score_inc_btn">+1 to Player Two</button>
-      <button id="reset">Reset</button>
+                     <p class="subtitle">Use the buttons below to keep score</p>
+
+                     <label for="playto" class="label is-large is-inline">Playing To</label>
+                     <div class="select is-primary is-rounded">
+                        <select name="winning_score_select" id="winning_score_select">
+                           <option value="3">3</option>
+                           <option value="4">4</option>
+                           <option value="5">5</option>
+                           <option value="6">6</option>
+                           <option value="7">7</option>
+                           <option value="8">8</option>
+                           <option value="9">9</option>
+                           <option value="10">10</option>
+                        </select>
+                     </div>
+
+                  </div>
+                  <footer class="card-footer">
+                     <button id="player1_score_inc_btn" class="button is-success card-footer-item is-large">+1 to Player One</button>
+                     <button id="player2_score_inc_btn" class="button is-info card-footer-item is-large">+1 to Player Two</button>
+                     <button id="reset" class="button is-danger card-footer-item is-large">Reset</button>
+                  </footer>
+               </div>
+            </div>
+         </div>
+      </div>
+
+
 
       <script src="./app.js"></script>
    </body>
