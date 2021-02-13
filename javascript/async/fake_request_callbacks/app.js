@@ -20,16 +20,17 @@ fakeRequestCallback(
       "book.com/page2",
       (response) => {
         console.log(`It worked 2nd time~~~`);
-        console.log(response);fakeRequestCallback(
-            "book.com/page1",
-            (response) => {
-              console.log(`It worked 3rd time~~~`);
-              console.log(response);
-            },
-            (err) => {
-              console.log(`Error on 3rd request: ${err}`);
-            }
-          );
+        console.log(response);
+        fakeRequestCallback(
+          "book.com/page1",
+          (response) => {
+            console.log(`It worked 3rd time~~~`);
+            console.log(response);
+          },
+          (err) => {
+            console.log(`Error on 3rd request: ${err}`);
+          }
+        );
       },
       (err) => {
         console.log(`Error on 2nd request: ${err}`);
