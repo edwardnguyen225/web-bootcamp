@@ -1,7 +1,12 @@
+const getRandomDelay = (maxDelayDuration) => {
+  return Math.floor(Math.random() * (maxDelayDuration + 500)) + 500;
+};
+
 const fakeRequestCallback = (url, success, failure) => {
-  const delay = Math.floor(Math.random() * 3500) + 500;
+  const delayLimit = 2000;
+  const delay = getRandomDelay(delayLimit);
   setTimeout(() => {
-    if (delay <= 3000) {
+    if (delay <= delayLimit) {
       success(`Here's your data from ${url}`);
     } else {
       failure(`OOPS, something went wrong :(((`);
@@ -9,8 +14,22 @@ const fakeRequestCallback = (url, success, failure) => {
   }, delay);
 };
 
-console.log(`Hello there.`);
+const fakeRequestPromise = (url) => {
+  return new Promise((resolve, reject) => {
+    const delayLimit = 2000;
+    const delay = getRandomDelay(delayLimit);
+    setTimeout(() => {
+      if (delay <= delayLimit) {
+        resolve(`Here's your data from ${url}`);
+      } else {
+        reject(`OOPS, something went wrong :(((`);
+      }
+    }, delay);
+  });
+};
 
+console.log(`Hello there, waiting for responses...`);
+/* 
 fakeRequestCallback(
   "book.com/page1",
   (response) => {
@@ -41,3 +60,31 @@ fakeRequestCallback(
     console.log(`Error: ${err}`);
   }
 );
+ */
+
+//  Promises make it easier to read code and maintain
+// by using then and read function
+fakeRequestPromise("random.com")
+  .then((res) => {
+    console.log(`It worked <3`);
+    console.log(res);
+    fakeRequestPromise("random.com/page1")
+      .then((res) => {
+        console.log(`It worked 2nd time <3`);
+        console.log(res);
+        fakeRequestPromise("random.com/page2")
+          .then((res) => {
+            console.log(`It worked 3rd time <3`);
+            console.log(res);
+          })
+          .catch((err) => {
+            console.log(`Error on 3rd request: ${err}`);
+          });
+      })
+      .catch((err) => {
+        console.log(`Error on 2nd request: ${err}`);
+      });
+  })
+  .catch((err) => {
+    console.log(`Error: ${err}`);
+  });
