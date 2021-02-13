@@ -64,7 +64,8 @@ fakeRequestCallback(
 
 //  Promises make it easier to read code and maintain
 // by using then and read function
-fakeRequestPromise("random.com")
+
+/* fakeRequestPromise("random.com")
   .then((res) => {
     console.log(`It worked <3`);
     console.log(res);
@@ -84,6 +85,28 @@ fakeRequestPromise("random.com")
       .catch((err) => {
         console.log(`Error on 2nd request: ${err}`);
       });
+  })
+  .catch((err) => {
+    console.log(`Error: ${err}`);
+  });
+ */
+
+// The magic is below
+// Using only 1 catch to catch all errors
+fakeRequestPromise("random.com")
+  .then((res) => {
+    console.log(`It worked <3`);
+    console.log(res);
+    return fakeRequestPromise("random.com/page1")
+  })
+  .then((res) => {
+    console.log(`It worked 2nd time <3`);
+    console.log(res);
+    return fakeRequestPromise("random.com/page2")
+  })
+  .then((res) => {
+    console.log(`It worked 3rd time <3`);
+    console.log(res);
   })
   .catch((err) => {
     console.log(`Error: ${err}`);
